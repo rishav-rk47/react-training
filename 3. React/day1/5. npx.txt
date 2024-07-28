@@ -1,0 +1,24 @@
+NPX is a package runner tool that comes with NPM (version 5.2.0 and higher).
+ It allows developers to execute Node.js packages directly without needing to install them globally. 
+ NPX simplifies the process of running CLI tools and scripts that are not necessarily part of your project's dependencies.
+
+Key Features:
+    Run Packages: Execute any Node.js package without prior installation.
+    Temporary Execution: Run packages temporarily, which are removed after execution.
+    Local Execution: Execute local project binaries.
+
+
+Usage Example:
+To execute a package: npx <package-name>
+To run a package from a specific version: npx <package-name>@<version>
+
+what happen if we don't use npx to run create-react-app, we'll need to install create-react-app globally on our system first.
+
+step: 
+npm install -g create-react-app
+
+create-react-app my-new-app
+
+
+Without npx: we need to globally install create-react-app and then run it to create a new project.
+With npx: we can directly run the command without prior installation, ensuring you use the latest version and avoiding global installations.

@@ -1,0 +1,48 @@
+Redux :
+    redux is a container that help us to manage state globally
+
+
+Practical Use :
+  
+E-commerce Application:
+    Managing products, cart, user information, order history, filters, and search results.
+Social Media Platform:
+    Handling user data, posts, comments, likes, notifications, and real-time updates.
+Project Management Tool:
+    Managing projects, tasks, user roles, notifications, and activity logs.
+Content Management System (CMS):
+    Handling articles, authors, categories, tags, and media files.
+Financial Dashboard:
+    Managing user portfolios, stock prices, market data, transactions, and analytics
+
+
+Key concept of redux:
+ 1. store : hold state of our application
+ 2. action : An object that describes what happened and has a "type" property
+ 3. reducer : A function that determines how the state changes in response to an action
+
+Setup redux in our application : several ways
+1. without extra library that gives boiler plate code// depricated
+2. with extra library that gives boiler plate code
+
+
+to use library we need: redux and react-redux
+cmd: 
+
+npm install redux react-redux 
+
+latest way:
+npm install @reduxjs/toolkit react-redux
+
+1. Create a Slice:
+A slice is a collection of Redux reducer logic and actions for a single feature of our app.
+
+2. configure store
+3. provide store
+4. use redux hooks
+
+...........
+Redux Toolkit simplifies Redux setup and reduces boilerplate.
+Slices combine actions and reducers in a single file.
+configureStore from Redux Toolkit sets up the store with good defaults.
+useSelector and useDispatch hooks provide a simpler way to interact with the Redux store.

@@ -1,0 +1,111 @@
+
+Default Export
+-- one default export per modele , esay to import, {} not needed to import , exact name of the component not need
+
+// MyComponent.js
+const MyComponent = () => {
+  return <div>Hello, World!</div>;
+};
+
+export default MyComponent;
+
+export default const MyComponent = () => {
+  return <div>Hello, World!</div>;
+};
+
+// AnotherComponent.js
+import MyComponent as  from './MyComponent';
+
+const AnotherComponent = () => {
+  return (
+    <div>
+      <MyComponent />
+    </div>
+  );
+};
+
+
+export default AnotherComponent;
+
+
+>>>>>> Used for the primary component/function of a module.
+
+Non-Default (Named) Export
+-- we can export multiple component as named from one module, {} is needed , exact name of the component needed
+
+
+// MyComponents.js
+export const MyComponentA = () => {
+  return <div>Component A</div>;
+};
+
+export const MyComponentB = () => {
+  return <div>Component B</div>;
+};
+
+
+// AnotherComponent.js
+import { MyComponentA, MyComponentB } from './MyComponents';
+
+const AnotherComponent = () => {
+  return (
+    <div>
+      <MyComponentA />
+      <MyComponentB />
+    </div>
+  );
+};
+
+export default AnotherComponent;
+
+Used for additional components/functions/variables.
+
+
+Mixed export 
+-- we can also do 
+
+// MyComponents.js
+
+// Component A
+const MyComponentA = () => {
+  return <div>Component A</div>;
+};
+
+// Component B
+const MyComponentB = () => {
+  return <div>Component B</div>;
+};
+
+// Default export of one of the components
+export default MyComponentA;
+
+// Named export of the other component
+export { MyComponentB };
+
+
+>>>>approach 1: importing component default
+
+ // AnotherFile.js
+import MyComponentA from './MyComponents';
+
+const AnotherComponent = () => {
+  return <div><MyComponentA /></div>;
+};
+
+export default AnotherComponent;
+
+>>>>2>> named
+
+// AnotherFile.js
+import { MyComponentB } from './MyComponents';
+
+const AnotherComponent = () => {
+  return <div><MyComponentB /></div>;
+};
+
+export default AnotherComponent;
+
+
+>> both
+
+import MyComponentA, { MyComponent } from './MyComponents';

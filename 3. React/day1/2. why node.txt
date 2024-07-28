@@ -1,0 +1,9 @@
+why node ? - 
+
+--> what is required for web application development
+    -> development environment
+        Running Development Servers: Node.js provides a local server environment to test and develop React applications.
+        Module Bundling and Transpilation: Node.js runs tools like Webpack and Babel that bundle and transpile modern JavaScript and JSX code.
+        Package Management: Node.js comes with npm or Yarn to manage project dependencies.
+        Build Tools: Node.js is used to run various build tools that prepare your code for production.
+    

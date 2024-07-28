@@ -1,0 +1,87 @@
+
+State : >> 
+
+state refers to a built-in object that is used to contain data or information about the component.
+A component's state can change over time, usually as a result of user actions, network responses, or other factors.
+When the state of a component changes, React re-renders the component to reflect the new state.
+
+>> Hooks
+
+Hooks are a feature introduced in React 16.8 that allow you to use state and other React features in functional components.
+They enable you to use React's stateful behavior without writing a class. Hooks provide a way to use 
+state, side effects, context, refs, and other React features in functional components.
+
+>> useStae
+
+useState
+The useState hook is a fundamental hook in React that allows you to add state to functional components.
+It returns an array with two elements: the current state and a function that updates it
+
+import React, { useState } from 'react';
+
+function Counter() {
+  // Declare a state variable 'count' and a function 'setCount' to update it
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+export default Counter;
+
+>>  useEffect
+The useEffect hook allows you to perform side effects in functional components. 
+import React, { useState, useEffect } from 'react';
+
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCount(prevCount => prevCount + 1);
+    }, 1000);
+
+    // Cleanup function similar to componentWillUnmount
+    return () => clearInterval(timer);
+  }, []); // Empty array means this effect runs once (like componentDidMount)
+
+  return (
+    <div>
+      <p>Timer: {count}</p>
+    </div>
+  );
+}
+
+export default Timer;
+
+
+// handling event
+
+Handling events in React is very similar to handling events on DOM elements. However, there are some syntactic differences:
+
+React events are named using camelCase, rather than lowercase.
+You pass a function as the event handler, rather than a string.
+
+import React from 'react';
+
+function Greeting(props) {
+  function handleClick(name) {
+    alert(`Hello, ${name}!`);
+  }
+
+  return (
+    <div>
+      <button onClick={() => handleClick('Alice')}>Greet Alice</button>
+      <button onClick={() => handleClick('Bob')}>Greet Bob</button>
+    </div>
+  );
+}
+
+export default Greeting;

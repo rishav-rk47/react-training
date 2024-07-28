@@ -1,0 +1,13 @@
+1. we need to check node version in our terminal
+node --v
+
+2. check npm version
+npm --v
+
+3. create your first react application
+
+npx create-react-app myfirstapp
+
+4. cd myfirstapp
+5. npm start
+

@@ -1,0 +1,15 @@
+NPM stands for Node Package Manager, and it is a package manager for JavaScript.
+ It is the default package manager for the JavaScript runtime environment Node.js. 
+ It allows developers to install, share, and manage code packages (modules) that can be used in Node.js applications.
+
+Key Features:
+    Package Installation: Install packages from the npm registry.
+    Version Management: Manage dependencies' versions to ensure compatibility.
+    Scripts: Define and run scripts to automate tasks such as testing, building, and deploying code.
+    Dependency Management: Handle nested dependencies automatically.
+
+
+Usage Example:
+To initialize a new Node.js project: npm init
+To install a package: npm install <package-name>
+To install a package globally: npm install -g <package-name>

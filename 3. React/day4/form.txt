@@ -1,0 +1,21 @@
+form :
+
+form is use to submit the data
+
+react-router-dom
+
+npm i react-router-dom
+npm install react-router-dom
+
+BrowserRouter
+BrowserRouter is a router implementation that uses the HTML5 history API (pushState, replaceState, and the popstate event) 
+to keep your UI in sync with the URL. It is the top-level component that needs to wrap your entire application or the part of 
+the app where you want to use routing.
+
+Routes
+Routes is a new component introduced in React Router v6, which replaces the Switch component used in previous versions.
+ It iterates over all its children Route elements and renders the first one that matches the current location.
+
+Route
+Route is used to define the mapping between the URL path and the component that should be rendered. 
+It can also define nested routes and route parameters.
